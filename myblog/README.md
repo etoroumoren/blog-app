@@ -1,0 +1,1 @@
+This is apersonal blog created using python django framework.
