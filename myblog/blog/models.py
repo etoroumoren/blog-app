@@ -77,7 +77,10 @@ class Comment(models.Model):
     
     class Meta:
         ordering = ('-created',)
+        indexes = [
+            models.Index(fields=['created']),
+        ]
         
     def __str__(self):
-        return f'{self.name} added a comment at {self.created}'
+        return f'{self.name} added a comment on {self.post} at {self.created}'
     
